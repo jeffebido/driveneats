@@ -27,32 +27,32 @@
 			<h2>Primeiro, seu prato:</h2>
 			<div class="itens">
 
-				<div class="box-item">
+				<div class="box-item" onclick="change(this, 1)">
 					<img src="img/prato.png">
 					<h4 class="nome">Frango Yin Yang 1</h4>
 					<p class="desc">Um pouco de batata, um pouco de salada</p>
 					<div class="preco">
-						<p>R$14,90</p>
+						<p>R$<span>14,90</span></p>
 						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>
 
-				<div class="box-item selected">
+				<div class="box-item" onclick="change(this, 1)">
 					<img src="img/prato.png">
 					<h4 class="nome">Frango Yin Yang 2</h4>
 					<p class="desc">Um pouco de batata, um pouco de salada</p>
 					<div class="preco">
-						<p>R$14,90</p>
+						<p>R$<span>18,90</span></p>
 						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>
 
-				<div class="box-item">
+				<div class="box-item" onclick="change(this, 1)">
 					<img src="img/prato.png">
 					<h4 class="nome">Frango Yin Yang 3</h4>
 					<p class="desc">Um pouco de batata, um pouco de salada</p>
 					<div class="preco">
-						<p>R$14,90</p>
+						<p>R$<span>37,90</span></p>
 						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 					
@@ -65,32 +65,32 @@
 			<h2>Agora, sua bebida:</h2>
 			<div class="itens">
 
-				<div class="box-item">
+				<div class="box-item" onclick="change(this, 2)">
 					<img src="img/coca.png">
 					<h4 class="nome">Coquinha gelada 1</h4>
 					<p class="desc">Lata 350ml</p>
 					<div class="preco">
-						<p>R$4,90</p>
+						<p>R$<span>4,90</span></p>
 						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>
 
-				<div class="box-item">
+				<div class="box-item" onclick="change(this, 2)">
 					<img src="img/coca.png">
 					<h4 class="nome">Coquinha gelada 2</h4>
 					<p class="desc">Lata 350ml</p>
 					<div class="preco">
-						<p>R$4,90</p>
+						<p>R$<span>7,90</span></p>
 						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>
 
-				<div class="box-item">
+				<div class="box-item" onclick="change(this, 2)">
 					<img src="img/coca.png">
 					<h4 class="nome">Coquinha gelada 3</h4>
 					<p class="desc">Lata 350ml</p>
 					<div class="preco">
-						<p>R$4,90</p>
+						<p>R$<span>14,90</span></p>
 						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>
@@ -102,32 +102,32 @@
 			<h2>Por fim, sua sobremesa</h2>
 			<div class="itens">
 
-				<div class="box-item">
+				<div class="box-item" onclick="change(this, 3)">
 					<img src="img/prato.png">
 					<h4 class="nome">Pudim 1</h4>
 					<p class="desc">Apenas pudim</p>
 					<div class="preco">
-						<p>R$7,90</p>
+						<p>R$<span>7,90</span></p>
 						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>
 
-				<div class="box-item">
+				<div class="box-item" onclick="change(this, 3)">
 					<img src="img/prato.png">
 					<h4 class="nome">Pudim 2</h4>
 					<p class="desc">Apenas pudim</p>
 					<div class="preco">
-						<p>R$7,90</p>
+						<p>R$<span>5,90</span></p>
 						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>
 
-				<div class="box-item">
+				<div class="box-item" onclick="change(this, 3)">
 					<img src="img/prato.png">
 					<h4 class="nome">Pudim 3</h4>
 					<p class="desc">Apenas pudim</p>
 					<div class="preco">
-						<p>R$7,90</p>
+						<p>R$<span>8,90</span></p>
 						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>
@@ -137,8 +137,39 @@
 	</div>
 
 	<div class="barra-inferior">
-		<button class="botao disabled">Selecione os 3 itens<br> para fechar o pedido</button>
+		<button class="botao disabled" onclick="fechaPedido(this)">Selecione os 3 itens<br> para fechar o pedido</button>
 	</div>
+
+
+	<div class="modal-confirma">
+		<div class="modal-box">
+			<h4 class="title">Confirme seu pedido </h4>
+			<div class="lista">
+				<div class="item item-0">
+					<div class="nome"></div>
+					<div class="preco"></div>
+				</div>
+				<div class="item item-1">
+					<div class="nome"></div>
+					<div class="preco"></div>
+				</div>
+				<div class="item item-2">
+					<div class="nome"></div>
+					<div class="preco"></div>
+				</div>
+				<div class="item totais">
+					<div>TOTAL</div>
+					<div class="total-preco"></div>
+				</div>
+			</div>
+			<a class="btn-fechar-pedido" href="" >Tudo certo, pode pedir!</a>
+			<a class="btn-fechar-modal" onclick="fecharModal()" >Fechar</a>
+		</div>
+	</div>
+	
+
+
+	<script type="text/javascript" src="js/script.js"></script>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
